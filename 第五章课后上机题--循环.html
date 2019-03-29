@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>第一题：乘法表</h1>
+		<script>
+			for(var i=1;i<=9;i++){
+				for(var j=1;j<=i;j++){
+					document.write(j+"*"+i+"="+j*i+" ");
+				}
+				document.write("<br />");
+			}
+		</script>
+		<h1>上机练习第一题：计算某个正整数的阶乘</h1>
+		<script>
+			var num=Number(window.prompt("请输入正整数",4));
+			var result=1;
+			for(var i=num;i>=1;i--){
+				result*=i;
+			}
+			window.alert(num+"的阶乘为："+result);
+		</script>
+		<h1>上机练习第二题：100内偶数之和</h1>
+		<script>
+			var result=0;
+			for (var i=1;i<=100;i++) {
+				if(i%2==0){
+					result+=i;
+				}
+				if(result>2000){
+					document.write("和为"+result+"<br />");
+					break;
+				}
+			}
+			
+			var result2=0;
+			var i=1;
+			while(i<=100){
+				if(i % 2==0){
+					result2+=i;
+				}
+				if(result2>2000){
+					document.write("和为"+result2+"<br />");
+					break;
+				}
+				i++;
+			}
+		</script>
+		
+		<h1>上机练习第三题：打印三角形</h1>
+		<script>
+			for (var i=0;i<=6;i++) {
+				//打印左边标号为1的空白部分
+				for(var j=6;j>i;j--){
+					document.write("&nbsp;&nbsp;"+"&nbsp;");
+				}
+				//打印中间编号为2的数字部分
+				for(var k=0;k<=i;k++){
+					document.write(k+"&nbsp;");
+				}
+				//打印右边编号为3的数字部分
+				for(var m=i-1;m>=0;m--){
+					document.write(m+"&nbsp;");
+				}
+				document.write("<br />");
+				
+				
+			}
+		</script>
+	</body>
+</html>

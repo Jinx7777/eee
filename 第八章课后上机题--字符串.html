@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>第一题：“我是“JavaScript”，JavaScript是一门弱类型语言”这句话请输出在控制台。</h1>
+		<p>注意：第一个JavaScript带有中文的双引号。
+		</p>
+		<script>
+			console.log("我是\"JavaScript\"，JavaScript是一门弱类型语言");
+		</script>
+		
+		<h1>上机练习第二题：在上机练习1的基础上，完成以下需求：</h1>
+		<p>
+			<ol>
+				<li>获取第一次出现字符“Java”的下标位置。</li>
+				<li>获取从下标15开始到25结束的字符串。</li>
+				<li>获取从下标28开始的字符串。</li>
+				<li>将带有引号的JavaScript替换为“张三”。</li>
+				<li>将不带引号的JavaScript转换为大写，并输出这句话。</li>
+			</ol>
+		</p>
+		<script>
+			var str="我是\"JavaScript\"，JavaScript是一门弱类型语言";
+			console.log("第一次出现字符“Java”的下标位置是："+str.indexOf("Java"));
+			console.log("从下标15开始到25结束的字符串是："+str.substring(15,25));
+			console.log("下标28开始的字符串是："+str.substring(28));
+			console.log("JavaScript替换为张三："+str.replace(/JavaScript/,"张三"));
+			console.log("不带引号的JavaScript转换为大写：");
+			var newStr=str.slice(0,str.lastIndexOf("JavaScript"))+str.slice(str.lastIndexOf("JavaScript")).toUpperCase();
+			console.log(newStr);
+		</script>
+		
+		
+	</body>
+</html>

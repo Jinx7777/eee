@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+			
+	</head>
+	<body>
+		<script>
+//			function getMin(){
+//				var min=arguments[0];
+//				for(var i=0;i<arguments.length;i++){
+//					if(min>arguments[i]){
+//						min=arguments[i];
+//					}
+//				}
+//				return min;
+//			}
+//		
+//			var a=getMin(1,2,3,4,5,6,7,0,9);
+
+//			var person=new Object();
+//			person.name="张三";
+//			person.age=18;
+//			person.gender="男";
+//			person.weight="75kg";
+//			person.eat=function (){
+//				alert("吃");
+//			}
+//			person.sleep=function(){
+//				alert("睡觉");
+//			}
+//			
+//			alert(person.age);
+//			alert(person["age"]);
+//			person.eat();
+
+//			var cat={
+//				name:"小花",
+//				age:2,
+//				gender:"公",
+//				call:function(){
+//					alert("Jiao")
+//				},
+//				eat:function(){
+//					alert("吃");
+//				}
+//			};
+//			alert(cat.name);
+//			alert(cat["name"]);
+//			cat.name="花花";
+//			alert(cat.name);
+			
+//			cat.eat();
+//			cat.eat=function(){
+//				alert("修改过后的eat方法");
+//			}
+//			cat.eat();
+
+			function Person(){
+				this.name="";
+				this.age=0;
+				this.gender="男";
+//				this.eat=function(){
+//					alert("构造方法里面的吃");
+//				}
+			}
+			Person.prototype.eat=function(){
+				alert("原型方法吃");
+			}
+			
+//			var xiaoHong=new Person();
+//			alert(xiaoHong.age);
+//			alert(xiaoHong.name);
+//			xiaoHong.eat=function(){
+//				alert("重写的吃");
+//			}
+//			xiaoHong.eat();
+//			var xiaoLong=new Person("小龙",18);
+//			xiaoLong.eat();
+
+
+
+
+
+
+
+
+//			var xiaohong={
+//				name:"xiaohong",
+//				age:18,
+//				eat:function(){
+//					alert("chi");
+//				}
+//			};x
+//			for(var x in xiaohong){
+//				console.log(x+"====="+xiaohong[x]);
+//			}
+
+			var txt="我是\"JavaScript\",javascript是一门弱类型语言";
+			console.log(txt);
+			console.log(txt.indexOf("Java"));
+			console.log(txt.slice(15,25));
+			console.log(txt.substr(28));
+			console.log(txt.replace("javascript","张三"));
+			var str2=txt.slice(txt.lastIndexOf("javascript")).toUpperCase();
+			var str3=txt.replace("javascript是一门弱类型语言",str2);
+			console.log(str3);
+		</script>
+	</body>
+</html>

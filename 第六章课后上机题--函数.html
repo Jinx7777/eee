@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>第一题：计算小A成绩总和</h1>
+		<p>定义getSum函数用于计算小A的成绩总和，调用getSum函数得到成绩总和并将其输出在Web页面上。
+			<ul>
+				<li>局部变量：英语90、高数84、毛概78。</li>
+				<li>函数getSum：计算小A的成绩总和。</li>
+			</ul>
+		</p>
+		<script>
+			function getSum(){
+				var englishScore=90;
+				var higherMath=84;
+				var mGai=78;
+				
+				return englishScore+higherMath+mGai;
+			}
+			document.write("<p style='color: red;'>小A的成绩总和为："+getSum()+"</p>");
+		</script>
+		
+		<h1>上机练习第二题：比较一组数字的最小值。</h1>
+		<p>定义getMin函数。利用arguments对象来获取实参，通过比较得到最小值。调用getMin函数将最小值在Web页面输出。
+			<ul>
+				<li>实参参数：20、34、-3、15、99、45、77。</li>
+				<li>函数getSum：获取最小值。</li>
+			</ul>
+		</p>
+		<script>
+			function getMin(){
+				var min=arguments[0];
+				for(var i=0;i<arguments.length;i++){
+					if(arguments[i]<min){
+						min=arguments[i];
+					}
+				}
+				return min;
+			}
+			var min=getMin(20,34,-3,15,99,45,77);
+			document.write("<p style='color: red;'>最小值为："+min+"</p>");
+		</script>
+		
+		<h1>上机练习第三题：声明全局变量，定义add函数实现其变量自增，当变量值达到5时停止全局变量自增。</h1>
+		<p>
+			<ul>
+				<li>全局变量：num初始化为0。</li>
+				<li>函数add：num变量每次增一。</li>
+				<li>函数showNum：调用add函数并向Web页面输出全局变量值。</li>
+			</ul>
+		</p>
+		<script>
+			var num=0;
+			function add(){
+				for(var i=0;i<10;i++){
+					num++;
+					if(num==5){
+						return num;
+					}
+				}
+				
+			}
+			function showNum(){
+				document.write("<p style='color: red;'>值为："+add()+"</p>");
+			}
+			showNum();
+		</script>
+	</body>
+</html>

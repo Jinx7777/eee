@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--判断一个数是否是回文数
+		通过提示对话框输入一个五位数，
+		在JavaScript中声明变量接收该数字。
+		判断它是否为回文数
+		（回文数示例：12321是回文数，
+		个位与万位相同，十位与千位相同）。-->
+		<script>
+			var num=window.prompt("请输入一个五位数");
+			num=Number(num);
+			var g=num%10;
+			var s=parseInt(num%100/10);
+			var b=parseInt(num%1000/100);
+			var q=parseInt(num%10000/1000);
+			var w=parseInt(num%100000 /10000);
+			console.log("g="+g+",s="+s+",b="+b+",q="+q+",w="+w);
+			if(g==w && s==q){
+				window.alert(num+"是回文数");
+			}else{
+				window.alert(num+"不是回文数");
+			}
+
+//			var str1=num.split("").reverse();
+//			console.log("str1="+str1);
+//			var str2=str1.join("");
+//			console.log("str2="+str2);
+//			if(num==str2){
+//				window.alert(num+"是回文数");
+//			}else{
+//				window.alert(num+"不是回文数");
+//			}
+			
+			console.log(typeof(num));
+			
+			var score=window.prompt("请输入学生的成绩");
+			var grade;
+			if(Number(score)>=80){
+				grade="A";
+			}else{
+				grade="B";
+			}
+			window.alert(grade);
+		</script>
+	</body>
+</html>

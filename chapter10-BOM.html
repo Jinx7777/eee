@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="btn" id="btn" value="打开网页" />
+		<input type="button" name="btn" id="btn2" value="新窗口中打开网页" />
+		<input type="button" name="btn" id="btn3" value="关闭窗口" />
+		<input type="button" name="btn" id="btn4" value="移动窗口" />
+		<input type="button" name="btn" id="btn5" value="改变窗口大小" />
+		<input type="button" name="btn" id="btn6" value="改变窗口大小by" />
+		<input type="button" name="btn" id="btn7" value="重定向" />
+		<input type="button" name="btn" id="btn8" value="history length" />
+		<input type="button" name="btn" id="btn9" value="history back" />
+		<input type="button" name="btn" id="btn10" value="history forwth" />
+		<input type="button" name="btn" id="btn11" value="location reload()" />
+		<input type="button" name="btn" id="btn12" value="navigator" />
+		<input type="button" name="btn" id="btn13" value="navigator" />
+		<input type="button" name="btn" id="btn14" value="navigator" />
+		<p id="timer"></p>
+		<form action="#" method="get">
+			姓名：<input type="text" name="text" id="text" value="text" /><br />
+			年龄:<input type="text" name="age" id="text" value="text" /><br />
+			身高：<input type="text" name="height" id="text" value="text" /><br />
+			<input type="submit" name="sub" id="sub" value="提价" onsubmit="l()" /><br />
+		</form>
+		<script>
+//			var w=window.innerWidth;
+//			var h=window.innerHeight;
+//			console.log(w);
+//			console.log(h);
+//			//ie 8 7,6,5
+//			var ieW=document.documentElement.clientWidth;
+//			var ieH=document.documentElement.clientHeight;
+//			console.log(ieW);
+//			console.log(ieH);
+//			var ieW2=document.body.clientWidth;
+//			var ieH2=document.body.clientHeight;
+//			console.log(ieW2);
+//			console.log(ieH2);
+			
+//			var width=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; 
+//			var height=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight; 
+//			console.log(width);
+//			console.log(height);
+
+//			window.open(url,name,specs,)
+			var btn=document.getElementById("btn");
+			btn.onclick=function(){
+				window.open("https://www.baidu.com");
+			}
+			var btn2=document.getElementById("btn2");
+			btn2.onclick=function(){
+				mywin=window.open("","新窗口","width=200,height=200");
+				mywin.focus();
+			}
+			var btn3=document.getElementById("btn3");
+			btn3.onclick=function(){
+				mywin.close();
+			}
+			var btn4=document.getElementById("btn4");
+			btn4.onclick=function(){
+				mywin.moveTo(200,200);
+			}
+			var btn5=document.getElementById("btn5");
+			btn5.onclick=function(){
+				mywin.resizeTo(400,400);
+				mywin.focus();
+			}
+			var btn6=document.getElementById("btn6");
+			btn6.onclick=function(){
+				mywin.resizeBy(300,400);
+				mywin.focus();
+			}
+			
+			function l(){
+				console.log(location.href);
+				console.log(location.pathname);
+				console.log(location.port);
+				console.log(location.host);
+				console.log(location.hostname);
+				console.log(location.search);
+				console.log(location.hash);
+			}
+			l();
+			
+			var btn7=document.getElementById("btn7");
+			btn7.onclick=function(){
+				location.href="https://www.baidu.com";
+			}
+			
+			//history
+			var btn8=document.getElementById("btn8");
+			btn8.onclick=function(){
+				console.log(history.length);
+			}
+			var btn9=document.getElementById("btn9");
+			btn9.onclick=function(){
+				history.back();
+			}
+			var btn10=document.getElementById("btn10");
+			btn10.onclick=function(){
+				history.forward();
+			}
+			var btn11=document.getElementById("btn11");
+			btn11.onclick=function(){
+				location.reload(true);
+			}
+			var btn12=document.getElementById("btn12");
+			btn12.onclick=function(){
+				console.log(navigator.appCodeName);
+				console.log(navigator.appName);
+				console.log(navigator.appVersion);
+				console.log(navigator.language);
+			}
+			
+//			var id=setTimeout(参数1,参数2)
+			function demo1(){
+				alert("aa");
+			}
+//			var id=setTimeout(demo1,3000);
+//			console.log(id);
+//			
+//			var id2=setInterval(function(){
+//				console.log("a");
+//			},2000);
+			
+			var btn13=document.getElementById("btn13");
+			var p=document.getElementById("timer");
+			btn13.onclick=function(){
+				clearInterval(id);
+			}
+			
+			function getTimer(){
+				var d=new Date();
+				var dd=d.toLocaleTimeString();
+				p.innerHTML=dd;
+			}
+			
+			var id=setInterval(getTimer,1000);
+			
+		</script>
+	</body>
+</html>

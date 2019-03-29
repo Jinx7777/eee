@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 360px;
+				border: 1px solid green;
+				margin:100px auto;
+				padding-top:360px;
+				background-image:url(img/01big.jpg) ;
+				background-repeat: no-repeat;
+			}
+			#box ul{
+				list-style: none;
+				height: 70px;
+				border-top: 1px solid gray;
+			}
+			#box ul li{
+				float: left;
+				cursor: pointer;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box=document.getElementById("box")
+				var li=document.getElementsByTagName("li")
+				function changeId
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li><img src="img/01.jpg"/></li>
+				<li><img src="img/02.jpg"/></li>
+				<li><img src="img/03.jpg"/></li>
+				<li><img src="img/04.jpg"/></li>
+				<li><img src="img/05.jpg"/></li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function changBI(obj1,boj2,ingUrl){
+			boj1.onmouseover=function(){
+				boj2.style.backgroundImage=ingUrl
+			}
+		}
+	</script>
+</html>

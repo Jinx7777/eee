@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: url(img/1.jpg) no-repeat;
+			background-size: cover;
+		}
+		#box{
+			text-align: center;
+			height: 150px;
+			background-color: rgba(255,255,255,3) ;
+		}
+		#box img{
+			cursor:pointer ; 
+		}
+		
+	</style>
+	<script type="text/javascript">
+		window.onclick=function(){
+			var ings=document.getElementsByTagName("img");
+			ings[0].onclick=function(){
+				document.body.style.backgroundImage="url(img/1.jpg)"
+			}
+			ings[1].onclick=function(){
+				document.body.style.backgroundImage="url(img/nature_forest_dawn_winter_mountains_108235_1920x1080.jpg)"
+			}
+			ings[2].onclick=function(){
+				document.body.style.backgroundImage="url(img/3.jpg)"
+			}
+			ings[3].onclick=function(){
+				document.body.style.backgroundImage="url(img/4.jpg)"
+			}
+			ings[4].onclick=function(){
+				document.body.style.backgroundImage="url(img/5.jpg)"
+			}
+		}
+	</script>
+	</head>
+	<body>  
+		<div id="box">
+			<img src="img/1.jpg"  width="150px"/>
+			<img src="img/nature_forest_dawn_winter_mountains_108235_1920x1080.jpg"  width="150px"/>
+			<img src="img/3.jpg" width="150px" />
+			<img src="img/4.jpg"  width="150px"/>
+			<img src="img/5.jpg"  width="150px"/>
+		</div>
+	</body>
+</html>
